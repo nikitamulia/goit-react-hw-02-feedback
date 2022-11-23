@@ -19,7 +19,7 @@ export class App extends React.Component{
    return this.state.good + this.state.bad + this.state.neutral
   }
   positivePercentage = () => {
-    return this.totalStatistics ? this.state.good/(this.state.good + this.state.bad)*100 : 0
+    return this.totalStatistics ? Math.round(this.state.good/(this.state.good + this.state.bad)*100) : 0
   }
 
   
@@ -29,12 +29,10 @@ export class App extends React.Component{
       return(
         <div
         style={{
-          height: '100vh',
+          height: 600,
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: 40,
+          fontSize: 30,
           color: '#010101'
         }}
       >
