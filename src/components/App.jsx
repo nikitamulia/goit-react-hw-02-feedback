@@ -19,7 +19,7 @@ export class App extends React.Component{
    return this.state.good + this.state.bad + this.state.neutral
   }
   positivePercentage = () => {
-    return this.totalStatistics ? Math.round(this.state.good/(this.state.good + this.state.bad)*100) : 0
+    return this.totalStatistics ? Math.round(this.state.good/(this.state.good + this.state.bad + this.state.neutral)*100) : 0
   }
 
   
